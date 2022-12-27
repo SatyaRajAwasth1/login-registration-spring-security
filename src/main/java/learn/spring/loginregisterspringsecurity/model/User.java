@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Collection;
 @Entity
 @Table (name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-class User {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
