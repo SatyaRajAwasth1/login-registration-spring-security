@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 // a repository to perform CRUD operations.
 @Repository
-public interface UserRepository extends JpaRepository<Role,Long> {
+public interface UserRepository extends JpaRepository< Object ,Long > {
 }
