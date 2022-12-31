@@ -4,6 +4,7 @@ import learn.spring.loginregisterspringsecurity.model.User;
 import learn.spring.loginregisterspringsecurity.service.UserService;
 import learn.spring.loginregisterspringsecurity.web.dto.UserRegistrationDto;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,12 @@ public class UserRegistrationController {
 
     @PostMapping
 
+    @GetMapping
+    public String registerationForm (){
+
+        return "register";
+    }
+    @PostMapping // handles data post requests
     public String registerUser(UserRegistrationDto registrationDto){
         userService.add(registrationDto);
         return "redirect:/register?sucess"; // redirect to the page after registering
