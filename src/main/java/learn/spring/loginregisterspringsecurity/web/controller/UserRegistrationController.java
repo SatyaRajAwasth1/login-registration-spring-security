@@ -19,16 +19,17 @@ public class UserRegistrationController {
     public UserRegistrationController(UserService userService) {
         this.userService = userService;
     }
-
-    @PostMapping
+    @ModelAttribute("user")
+    public UserRegistrationDto userRegistrationDto(){
+        return  new UserRegistrationDto();
+    }
 
     @GetMapping
     public String registerationForm (){
-
         return "register";
     }
     @PostMapping // handles data post requests
-    public String registerUser(UserRegistrationDto registrationDto){
+    public String registerUser(@ModelAttribute("user") UserRegistrationDto registrationDto){
         userService.add(registrationDto);
         return "redirect:/register?sucess"; // redirect to the page after registering
     }
