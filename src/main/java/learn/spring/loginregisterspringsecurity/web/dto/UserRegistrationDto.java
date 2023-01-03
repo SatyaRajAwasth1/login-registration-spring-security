@@ -7,6 +7,9 @@ public class UserRegistrationDto {
     private String email;
     private String password;
 
+    public UserRegistrationDto() {
+        // default no-arg constructor
+    }
     public UserRegistrationDto(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
