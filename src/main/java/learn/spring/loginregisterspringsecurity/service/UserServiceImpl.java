@@ -4,6 +4,7 @@ import learn.spring.loginregisterspringsecurity.model.Role;
 import learn.spring.loginregisterspringsecurity.model.User;
 import learn.spring.loginregisterspringsecurity.repository.UserRepository;
 import learn.spring.loginregisterspringsecurity.web.dto.UserRegistrationDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -13,7 +14,7 @@ import java.util.Arrays;
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
-
+    @Autowired
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
