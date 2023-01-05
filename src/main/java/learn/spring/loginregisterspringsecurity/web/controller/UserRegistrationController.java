@@ -5,6 +5,7 @@ import learn.spring.loginregisterspringsecurity.service.UserService;
 import learn.spring.loginregisterspringsecurity.web.dto.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +27,8 @@ public class UserRegistrationController {
     }
 
     @GetMapping
-    public String registerationForm (){
+    public String registerationForm (){ //(Model model)
+        //model.addAttribute("user", new UserRegistrationDto());
         return "register";
     }
     @PostMapping // handles data post requests
