@@ -27,8 +27,8 @@ public class UserRegistrationController {
     }
 
     @GetMapping
-    public String registerationForm (){ //(Model model)
-        //model.addAttribute("user", new UserRegistrationDto());
+    public String registerationForm (Model model){
+        model.addAttribute("user", new UserRegistrationDto());
         return "register";
     }
     @PostMapping // handles data post requests
