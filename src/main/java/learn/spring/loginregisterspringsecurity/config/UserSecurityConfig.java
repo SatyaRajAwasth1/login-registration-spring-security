@@ -6,5 +6,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configurable
 @EnableWebSecurity
-public class UserSecurityConfig  {
+public class UserSecurityConfig extends WebSecurityConfiguration {
+
 }
